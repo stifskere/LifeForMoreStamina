@@ -1,7 +1,9 @@
-﻿./idea
+﻿.idea/
 
-./bin
+[Bb]in/
 
-./obj
+[Oo]bj/
 
-./packages
+[Pp]ackages/
+
+[Rr]elease/
