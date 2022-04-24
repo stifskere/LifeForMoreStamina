@@ -1,11 +1,7 @@
 ﻿using System;
-using Assets._Scripts.Dissonance;
-using CommandSystem.Commands.RemoteAdmin.Doors;
 using Exiled.API.Features;
-using Exiled.Events;
+using Exiled.API.Interfaces;
 using Exiled.Events.EventArgs;
-using Interactables.Interobjects.DoorUtils;
-using Player = Exiled.Events.Handlers.Player;
 
 namespace LifeForMoreStamina
 {
@@ -30,9 +26,10 @@ namespace LifeForMoreStamina
         private void PlayerRunning(ChangingMoveStateEventArgs ev)
         {
             if (ev.NewState != PlayerMovementState.Walking) return;
-            if (!(ev.Player.Stamina.RemainingStamina <= 0.015f)) return;
+            ev.NewState = PlayerMovementState.Sprinting;
+            if (!(ev.Player.Stamina.RemainingStamina <= 0.025f)) return;
             ev.Player.Stamina.RemainingStamina = 0.050f;
-            ev.Player.Health--;
+            ev.Player.Health -= Config.HpRemoved;
             ev.NewState = PlayerMovementState.Sprinting;
         }
     }

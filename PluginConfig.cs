@@ -5,5 +5,6 @@ namespace LifeForMoreStamina
     public class PluginConfig : IConfig
     {
         public bool IsEnabled { get; set; } = true;
+        public int HpRemoved { get; set; } = 1;
     }
 }
