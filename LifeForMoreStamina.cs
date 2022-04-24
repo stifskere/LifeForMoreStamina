@@ -1,6 +1,5 @@
 ﻿using System;
 using Exiled.API.Features;
-using Exiled.API.Interfaces;
 using Exiled.Events.EventArgs;
 
 namespace LifeForMoreStamina
