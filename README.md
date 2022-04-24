@@ -16,4 +16,4 @@ This plugin is very basic, there is a single custom configuration that lets you 
 
 # Demonstration
 
-https://cdn.memw.es/LifeForMoreStamina.mp4
+https://github.com/stifskere/LifeForMoreStamina/blob/master/LifeForMoreStaminaDemonstration.mp4
