@@ -24,12 +24,9 @@ namespace LifeForMoreStamina
 
         private void PlayerRunning(ChangingMoveStateEventArgs ev)
         {
-            if (ev.NewState != PlayerMovementState.Walking) return;
-            ev.NewState = PlayerMovementState.Sprinting;
             if (!(ev.Player.Stamina.RemainingStamina <= 0.025f)) return;
             ev.Player.Stamina.RemainingStamina = 0.050f;
             ev.Player.Health -= Config.HpRemoved;
-            ev.NewState = PlayerMovementState.Sprinting;
         }
     }
 }
