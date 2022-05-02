@@ -16,4 +16,5 @@ This plugin is very basic, there is a single custom configuration that lets you 
 
 # Demonstration
 
-https://github.com/stifskere/LifeForMoreStamina/blob/master/LifeForMoreStaminaDemonstration.mp4
+https://user-images.githubusercontent.com/79871802/166295004-dcec127a-7c33-49f3-b4bc-8f84b0013430.mp4
+
