@@ -8,7 +8,7 @@ namespace LifeForMoreStamina
     {
         public override string Author => "Memw#6969";
         public override string Name => "LifeForMoreStamina";
-        public override Version Version => new Version(1, 0, 0);
+        public override Version Version => new Version(1, 3, 0);
 
         public override void OnEnabled()
         {
@@ -25,7 +25,7 @@ namespace LifeForMoreStamina
         private void PlayerRunning(ChangingMoveStateEventArgs ev)
         {
             if (!(ev.Player.Stamina.RemainingStamina <= 0.025f)) return;
-            ev.Player.Stamina.RemainingStamina = 0.050f;
+            ev.Player.Stamina.RemainingStamina = Convert.ToSingle(Config.StaminaAdded);
             ev.Player.Health -= Config.HpRemoved;
         }
     }
