@@ -7,6 +7,10 @@ namespace LifeForMoreStamina
     {
         [Description("Defines if the plugin is enabled or it isn't")]
         public bool IsEnabled { get; set; } = true;
+
+        [Description("Defines the debug mode for this plugin")]
+        public bool Debug { get; set; } = false;
+
         [Description("Defines how many life gets removed for every time stamina is depleted")]
         public int HpRemoved { get; set; } = 1;
         [Description("Defines how many stamina gets added after the stamina gets to 0.025 (There is no config for this because the counter bugs if you put a smaller value on there.) the values of the stamina are from 0 to 1 being 0.50 the half")]

@@ -1,6 +1,6 @@
 ﻿using System;
 using Exiled.API.Features;
-using Exiled.Events.EventArgs;
+using Exiled.Events.EventArgs.Player;
 
 namespace LifeForMoreStamina
 {
@@ -24,8 +24,8 @@ namespace LifeForMoreStamina
 
         private void PlayerRunning(ChangingMoveStateEventArgs ev)
         {
-            if (!(ev.Player.Stamina.RemainingStamina <= 0.025f)) return;
-            ev.Player.Stamina.RemainingStamina = Convert.ToSingle(Config.StaminaAdded);
+            if (!(ev.Player.Stamina <= 0.025f)) return;
+            ev.Player.Stamina = Convert.ToSingle(Config.StaminaAdded);
             ev.Player.Health -= Config.HpRemoved;
         }
     }
