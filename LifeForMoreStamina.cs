@@ -1,4 +1,5 @@
 ﻿using System;
+using Exiled.API.Enums;
 using Exiled.API.Features;
 using Exiled.Events.EventArgs.Player;
 
@@ -24,6 +25,7 @@ namespace LifeForMoreStamina
 
         private void PlayerRunning(ChangingMoveStateEventArgs ev)
         {
+            if (ev.Player.Role.Side == Side.Scp) return;
             if (!(ev.Player.Stamina <= 0.025f)) return;
             ev.Player.Stamina = Convert.ToSingle(Config.StaminaAdded);
             ev.Player.Health -= Config.HpRemoved;
